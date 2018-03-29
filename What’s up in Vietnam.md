@@ -91,7 +91,7 @@ In the meantime, our team went to Neo4j conference which was organized by CD PRO
 This text is a bit naive too. I’m not forcing you to use more difficult tool to achieve a kind of karma. Relational databases and ORMs are advanced tools and I’m using it often privately. Just think at first a little bit if chosen technology fits your requirements. Relational databases and ORMs are not the only right way, it shouldn’t be even default way. It should be a decision.
 
 ## So … what changed since Vietnam War and what are we yet to solve in ORMs?
-So, 11 years have passed.
+So, 12 years have passed.
 1. Some problems have evolved. Joins are much faster now thanks to solutions like ClusterixDB. There are newly built-in mechanisms in relational databases. We can store documents in PostgreSQL database. Although it’s still not the best idea to create SQL with dozens of joins, but modern databases are optimized for less complex queries.
 2. Over time, composition started winning over inheritance in OOP. Mapping composition to RDBS is easier thanks to its relational origin.
 3. Using the same database by two applications is seen as a bad practice. This and others policy problems mentioned by Ted Neward are a little outdated. But on the other hand, many services are starting cooperatively. Updating such services is a quite hard to achieve. There is a time where one service needs to work with two versions of a database. Forcing ORM framework to work with two different versions of the database is almost impossible in clear and easy to achieve way.
