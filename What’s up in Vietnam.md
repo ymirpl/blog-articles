@@ -21,7 +21,7 @@ Summing up the above thought, we can say that every object is described by its i
 > The representation of your object in memory depends what you intend to do with it, and context-sensitive representation is not a feature of OO design.  
 _Laurie Voss_
 
-On the other hand, relational systems describe the set of truths related to each other. Although thanks to the 4th generation language – SQL – we can easily retrieve the facts hidden behind relations, it’s not the most efficient way to store the state of a collection of objects.
+On the other hand, relational systems describe the set of truths related to each other. Although thanks to the 4th generation language – DML – we can easily retrieve the facts hidden behind relations, it’s not the most efficient way to store the state of a collection of objects.
 
 ## How is it working under the hood?
 There are two patterns that ORM frameworks use: **Active Records** and **Data Mapper**.
@@ -54,7 +54,7 @@ Let’s imagine that we received an order from a client to create „an applicat
 Let’s try to solve such problem.
 
 ### Table-per-class approach
-This is the normalized way to achieve mapping. Every single class map a separate table with properties. The `smart_devices` table is in the 1:n relation with `light_management_devices`/`heating_devices`/`security_devices`/`etc.` Tables `light_management_devices`/`heating_devices`/`security_devices` are in 1:n relation with more specific classes. So, what’s the disadvantage? Try to create SQL to retrieve a record by its ID manually. It’s impractical. We need to, besides, create two artificial primary keys to determine records of more specific tables. Even if it happens behind the scenes, that’s a very inefficient way of retrieving data.
+This is the normalized way to achieve mapping. Every single class map a separate table with properties. The `smart_devices` table is in the 1:n relation with `light_management_devices`/`heating_devices`/`security_devices`/`etc.` Tables `light_management_devices`/`heating_devices`/`security_devices` are in 1:n relation with more specific classes. So, what’s the disadvantage? Try to create DML to retrieve a record by its ID manually. It’s impractical. We need to, besides, create two artificial primary keys to determine records of more specific tables. Even if it happens behind the scenes, that’s a very inefficient way of retrieving data.
 
 ### Table-per-concrete-class approach
 This approach has similar disadvantages. Let’s try to retrieve ten last updated devices. We need to union all data in a really obscure way (creating many Null columns):
