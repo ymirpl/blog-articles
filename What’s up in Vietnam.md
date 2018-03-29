@@ -105,8 +105,11 @@ _Ted Neward_
 _Laurie Voss_
 
 This problem applies to the whole ORM concept. By escaping the abstraction of ORM anywhere in the code, we’re also breaking the abstraction of Unit of Work, losing transactions, calling for unnecessary data and making objects inside unit of work dirty without marking them as dirty. List of side effects of breaking ORM framework abstraction by using plain SQL is long and depends on specific framework and conditions.
+
 5. Sometimes our objects are stored inside an existing process in kind of application cache. Database migration mechanism is often delivered with ORM framework. There is an entirely different situation with cache migrations systems. We need to solve such situations manually.
+
 6. Usually, more powerful ORM frameworks have lazy loading mechanism. This feature is neither consistent nor obvious (traditionally implemented by proxy design pattern), and we need to be careful not to DDoS the database by an innocently looking iteration.
+
 7. ORM frameworks, which using Active Record pattern incentive bad practices, like mixing persistence layer with domain layer, creating anemic domain objects, breaking Single Responsibility Principle. Trained software architects can avoid this and retain the sharp separation between persistence and domain model in exchange for painful maintenance.
 
 ## Summary
