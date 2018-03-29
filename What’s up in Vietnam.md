@@ -1,6 +1,6 @@
 # What’s up in Vietnam
 ## Introduction
-Is there a more sophisticated parallel to a part of computer science than a situation in Vietnam? The first brave soul was Ted Neward with his article “The Vietnam of Computer Science” comparing the Object Relational Mapping to one of the most disgraceful conflicts in the U.S. history. It was written in 2006. 11 years have passed, and many have changed in an approach to ORM.
+Is there a more sophisticated parallel to a part of computer science than a situation in Vietnam? The first brave soul was Ted Neward with his article “The Vietnam of Computer Science” comparing the Object Relational Mapping to one of the most disgraceful conflicts in the U.S. history. It was written in 2006. 12 years have passed, and many have changed in an approach to ORM.
 
 ## What the Object Relational Mapping stands for?
 Follow the definition on Wikipedia _it’s a technique for converting data between incompatible type systems using object-oriented programming languages._ To be stricter it’s converting relational data to the object-oriented domain model (OODM) and OODM to relational data. Conversions like that could be done in several ways, but the most common is a usage of a tool called ORM library or ORM framework.
